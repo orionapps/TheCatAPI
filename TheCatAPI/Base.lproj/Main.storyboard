@@ -12,7 +12,7 @@
         <!--Collection View Controller-->
         <scene sceneID="7xt-3s-MvG">
             <objects>
-                <collectionViewController id="o1P-qw-eoe" sceneMemberID="viewController">
+                <collectionViewController id="o1P-qw-eoe" customClass="CollectionViewController" customModule="TheCatAPI" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="K4E-8l-3rY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,13 +24,27 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="9iV-z0-Lao">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="catCell" id="9iV-z0-Lao" customClass="CollectionViewCell" customModule="TheCatAPI" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="196" height="171"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="196" height="171"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z7K-14-nEJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="196" height="171"/>
+                                        </imageView>
+                                    </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="z7K-14-nEJ" firstAttribute="leading" secondItem="9iV-z0-Lao" secondAttribute="leading" id="N3L-xH-0KT"/>
+                                    <constraint firstItem="z7K-14-nEJ" firstAttribute="top" secondItem="9iV-z0-Lao" secondAttribute="top" id="QmA-xM-ErH"/>
+                                    <constraint firstAttribute="bottom" secondItem="z7K-14-nEJ" secondAttribute="bottom" id="YOG-Sk-CG1"/>
+                                    <constraint firstAttribute="trailing" secondItem="z7K-14-nEJ" secondAttribute="trailing" id="qPD-qB-1FE"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="catImageCell" destination="z7K-14-nEJ" id="bEg-Sk-R58"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
