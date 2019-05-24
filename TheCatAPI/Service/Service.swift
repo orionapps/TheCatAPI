@@ -22,7 +22,7 @@ class Service: NSObject {
                 
                 var urlRequest = URLRequest(url: unwrappedURL)
                 urlRequest.addValue("4c5cd158-8c01-4caf-80df-d3340be3d13d", forHTTPHeaderField: "x-api-key")
-                
+
                 
                 URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
                     

@@ -11,11 +11,19 @@ import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var catImageCell: UIImageView!
+
+    @IBOutlet weak var imageViewCell: CustomImageView!
     
     var catViewModel: CatViewModel! {
         didSet {
-            catImageCell.image = UIImage(named: catViewModel.catImage)
+            setUpCellImage()
         }
     }
+    
+    func setUpCellImage() {
+        if let cellImageUrl = catViewModel?.catImage {
+
+            imageViewCell.loadImageUsingUrlString(urlString: cellImageUrl)
+        }
+}
 }

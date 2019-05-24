@@ -18,4 +18,10 @@ struct CatViewModel {
         self.catImage = catImage.url
     }
     
+    func detailViewModel(for indexPath: IndexPath) -> DetailsViewModel {
+        return DetailsViewModel(catImage: catImage)
+    }
+
 }
+
+
