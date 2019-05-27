@@ -10,7 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "catCell"
 
-class CollectionViewController: UICollectionViewController {
+class CollectionViewController: UICollectionViewController  {
     
     
     var catViewModel = [CatViewModel]()
@@ -20,6 +20,8 @@ class CollectionViewController: UICollectionViewController {
 
         fetchData()
     }
+    
+    //MARK: - Fetching data
     
     fileprivate func fetchData() {
 
@@ -36,6 +38,11 @@ class CollectionViewController: UICollectionViewController {
                 print("error in getData - \(error)")
             }
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+       testInternetConnection()
     }
     
     // MARK: UICollectionViewDataSource
@@ -63,10 +70,31 @@ class CollectionViewController: UICollectionViewController {
     }
 
 
-
+    //MARK: - Requesting a new data in case of internet connection loss
+    
     @IBAction func refreshButton(_ sender: Any) {
 
         fetchData()
     }
-
+    
+    //MARK: - Internet availability test
+    
+    func testInternetConnection() {
+        
+        if Reachability.isConnectedToNetwork() == true
+        {
+            print("Connected")
+        }
+        else
+        {
+            let controller = UIAlertController(title: "No Internet Detected", message: "This app requires an Internet connection", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            
+            controller.addAction(ok)
+            controller.addAction(cancel)
+            
+            present(controller, animated: true, completion: nil)
+        }
+    }
 }

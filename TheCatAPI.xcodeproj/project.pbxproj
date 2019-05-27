@@ -20,6 +20,7 @@
 		9F2EC11B2295586900EED38A /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EC11A2295586900EED38A /* CollectionViewCell.swift */; };
 		9F2EC11D2296812900EED38A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EC11C2296812900EED38A /* DetailViewController.swift */; };
 		9F2EC1272296B19700EED38A /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EC1262296B19700EED38A /* CustomImageView.swift */; };
+		9FF3C504229C02F400674351 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3C503229C02F400674351 /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		9F2EC11A2295586900EED38A /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		9F2EC11C2296812900EED38A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9F2EC1262296B19700EED38A /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		9FF3C503229C02F400674351 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				9F2EC1102294311A00EED38A /* Service.swift */,
+				9FF3C503229C02F400674351 /* Reachability.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				9F2EC1112294311A00EED38A /* Service.swift in Sources */,
 				9F2EC117229435CC00EED38A /* CollectionViewController.swift in Sources */,
 				9F2EC11D2296812900EED38A /* DetailViewController.swift in Sources */,
+				9FF3C504229C02F400674351 /* Reachability.swift in Sources */,
 				9F268AFC2297D9E000911F43 /* DetailsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
